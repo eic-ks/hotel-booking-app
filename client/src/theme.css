@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --font-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #f4f2ea;
+  --surface: #fffdf7;
+  --surface-2: #eceade;
+  --text: #1c2420;
+  --dim: #5f6a62;
+  --border: #d9d5c6;
+  --accent: #1d4d3b;
+  --accent-ink: #ffffff;
+  --accent-2: #c2511f;
+  --gold: #9a7414;
+  --radius: 10px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-2);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121714;
+    --surface: #1b211d;
+    --surface-2: #242b26;
+    --text: #eceadf;
+    --dim: #a3ada5;
+    --border: #333b35;
+    --accent: #7fc7a8;
+    --accent-ink: #0e241b;
+    --accent-2: #e88a5f;
+    --gold: #d9b45c;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Map pins (hatch-maps marker HTML) */
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid #fffdf7;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.pin--dest {
+  background: var(--accent-2);
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+.pin--on {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 1px;
+}
+.map-selected {
+  outline: 2px solid var(--accent-2);
+  outline-offset: -2px;
+}
